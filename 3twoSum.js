@@ -4,11 +4,6 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    const set = new Set()
-    for ( let i in nums) {
-        if (set.has(target - nums[i])) return [i, nums.indexOf(target - nums[i])]
-        set.add(nums[i])
-    }
 };
 /*  USING HASH SET IN ONE PASS O(N)
 var twoSum = function(nums, target) {
