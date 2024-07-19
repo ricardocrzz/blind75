@@ -78,3 +78,17 @@ class Solution:
                 #anagrams[setofword]
                 anagrams[listofsetofwords.index(dictofwords[word])].append(word)
         return anagrams
+
+#third try with ascii values 
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        result = defaultdict(list)
+
+        for word in strs:
+            key = [0] * 26
+            for char in word:
+                key[ord(char)-ord('a')] += 1
+        #print(tuple(key))
+            result[tuple(key)].append(word)
+        print(result.values())
+        return result.values()
