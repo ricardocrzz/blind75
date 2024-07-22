@@ -24,3 +24,19 @@ class Solution:
         if s1 == s2:
             return True
         return False
+
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        left=0
+        right=len(s)-1
+        while left<=right:
+            while left<right and ((ord(s[left]) >= ord('A') and ord(s[left]) <= ord('z')) == False and (ord(s[left]) >= ord('0') and ord(s[left]) <= ord('9')) == False):
+                left += 1
+            while left<right and ((ord(s[right]) >= ord('A') and ord(s[right]) <= ord('z')) == False and (ord(s[right]) >= ord('0') and ord(s[right]) <= ord('9')) == False):
+                right -= 1
+            if s[left].lower() != s[right].lower():
+                return False
+            left += 1
+            right -= 1
+        return True
