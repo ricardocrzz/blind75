@@ -1,0 +1,35 @@
+import heapq
+
+heap = []
+heapq.heappush(heap,10)
+heapq.heappush(heap,20)
+heapq.heappush(heap,40)
+heapq.heappush(heap,5)
+heapq.heappush(heap,30)
+print(heap)
+
+smallest=heapq.heappop(heap)
+print(smallest)
+print(heap)
+
+mylist = [31,6,3,5,2,16,17,47,10,9,20]
+heapq.heapify(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
+heapq.heappop(mylist)
+print(mylist)
